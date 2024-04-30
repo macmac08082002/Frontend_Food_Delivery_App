@@ -1,0 +1,243 @@
+.cart {
+  margin-top: 100px;
+  min-height: 60vh;
+}
+.cart-items-title {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  color: grey;
+  font-size: max(1vw, 12px);
+}
+.cart-items-item {
+  margin: 10px 0px;
+  color: black;
+}
+.cart-items-item img {
+  width: 80px;
+}
+.cart hr {
+  height: 1px;
+  background-color: #e2e2e2;
+  border: none;
+}
+
+.cross {
+  cursor: pointer;
+  width: 20px;
+  font-size: 20px;
+  color: red;
+  margin-left: 20px;
+}
+
+.cart-bottom {
+  padding: 30px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: max(12vw, 20px);
+}
+.cart-total {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.cart-total-details {
+  display: flex;
+  justify-content: center;
+  color: #555;
+}
+.cart-total hr {
+  margin: 10px 0px;
+}
+.cart-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px; /* Cài đặt margin top cho phần cart-bottom */
+}
+
+.cart-total {
+  flex: 1; /* Phần cart-total chiếm một phần tử trong flex container */
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.cart-total-details p {
+  margin: 0;
+}
+
+.cart-promocode {
+  flex: 1; /* Phần cart-promocode chiếm một phần tử trong flex container */
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.cart-promocode p {
+  margin-bottom: 10px;
+}
+
+.cart-promocode-input {
+  display: flex;
+}
+
+.cart-promocode-input input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.cart-promocode-input button {
+  padding: 5px 10px;
+  background-color: tomato;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-promocode-input button:hover {
+  background-color: tomato;
+}
+.cart-bottom button {
+  padding: 10px 20px;
+  background-color: tomato;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-bottom button:hover {
+  background-color: tomato;
+}
+.cart-promocode div p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-promocode-input input {
+  padding-left: 20px;
+}
+@media (max-width: 1200px) {
+  /* Styles for screens up to 1200px wide */
+  .cart-items-title {
+    font-size: 14px;
+  }
+
+  .cart-bottom {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Styles for screens up to 992px wide */
+  .cart-items-title {
+    grid-template-columns: 0.8fr 1.2fr 1fr 1fr 1fr 0.5fr;
+  }
+
+  .cart-items-item img {
+    width: 70px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Styles for screens up to 576px wide */
+  .cart-items-title {
+    grid-template-columns: 0.5fr 1fr 0.8fr 0.8fr 0.5fr;
+  }
+
+  .cart-items-item img {
+    width: 50px;
+  }
+
+  .cart-total-details p,
+  .cart-promocode p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  /* Styles for screens up to 360px wide */
+  .cart-items-title {
+    grid-template-columns: 0.4fr 0.8fr 0.6fr 0.6fr 0.4fr;
+    font-size: 8px;
+  }
+
+  .cart-items-item img {
+    width: 30px;
+  }
+
+  .cart-total-details p,
+  .cart-promocode p {
+    font-size: 12px;
+  }
+
+  .cart-bottom button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
+@media (max-width: 768px) {
+  /* Styles for screens up to 768px wide */
+  .cart-items-title {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    font-size: 12px;
+  }
+
+  .cart-items-item img {
+    width: 60px;
+  }
+
+  .cart-bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cart-total,
+  .cart-promocode {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for screens up to 480px wide */
+  .cart-items-title {
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    font-size: 10px;
+  }
+
+  .cart-items-item img {
+    width: 40px;
+  }
+
+  .cart-items-title p:nth-child(2) {
+    display: none; /* Hide the "Title" column on small screens */
+  }
+
+  .cart-bottom button {
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .cart-items-title {
+    /* Định dạng lại cho phần tử cart-items-title trên màn hình nhỏ */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .cart-items-title p {
+    /* Định dạng lại cho các phần tử p trong cart-items-title trên màn hình nhỏ */
+    font-size: 12px;
+  }
+
+  /* Thêm các cài đặt CSS khác cho màn hình nhỏ */
+}
